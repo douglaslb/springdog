@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ page isErrorPage="true"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,38 +31,48 @@
 					style="margin-right: 10px;"></i> Voltar para home
 				</a>
 			</section>
-			<form:form modelAttribute="dogModel" action="${contextPath}/${dogModel.id}" method="put">
+			<form:form modelAttribute="dogModel"
+				action="${contextPath}/${dogModel.id}" method="put">
 
-				<label for="nomeDone">Nome do dono</label>
-				<form:input path="nomeDono" placeholder="Nome do dono" id="nomeDono" />
-				<font color="red"><form:errors path="nomeDono" /></font>
-				<br />
+				<div class="form-group">
+					<label for="nomeDone">Nome do dono</label>
+					<form:input path="nomeDono" placeholder="Nome do dono"
+						id="nomeDono" />
+					<font color="red"><form:errors path="nomeDono" /></font> <br />
+				</div>
 
-				<label for="cpf">CPF</label>
-				<form:input path="cpf" placeholder="CPF do dono" id="cpf" />
-				<font color="red"><form:errors path="cpf" /></font>
-				<br />
+				<div class="form-group">
+					<label for="cpf">CPF</label>
+					<form:input path="cpf" placeholder="CPF do dono" id="cpf" />
+					<font color="red"><form:errors path="cpf" /></font> <br />
+				</div>
 
-				<label for="nomeDog">Nome do dog</label>
-				<form:input path="nome" placeholder="Nome do dog" id="nomeDog" />
-				<font color="red"><form:errors path="nome" /></font>
-				<br />
+				<div class="form-group">
+					<label for="nomeDog">Nome do dog</label>
+					<form:input path="nome" placeholder="Nome do dog" id="nomeDog" />
+					<font color="red"><form:errors path="nome" /></font> <br />
+				</div>
 
-				<label for="raca">Raça</label>
-				<form:input path="raca" placeholder="Raça" id="raca" />
-				<font color="red"><form:errors path="raca" /></font>
-				<br />
+				<div class="form-group">
+					<label for="raca">Raça</label>
+					<form:input path="raca" placeholder="Raça" id="raca" />
+					<font color="red"><form:errors path="raca" /></font> <br />
+				</div>
 
-				<label for="idade">Idade</label>
-				<form:input path="idade" placeholder="Idade" type="number"
-					id="idade" />
-				<font color="red"><form:errors path="idade" /></font>
-				<br />
+				<div class="form-group">
+					<label for="idade">Idade</label>
+					<form:input path="idade" placeholder="Idade" type="number"
+						id="idade" />
+					<font color="red"><form:errors path="idade" /></font> <br />
+				</div>
 
-				<label for="historia">História</label>
-				<form:textarea path="historia" placeholder="Conte uma história" id="historia"></form:textarea>
-				<font color="red"><form:errors path="historia" /></font>
-				<br />
+
+				<div class="form-group">
+					<label for="historia">História</label>
+					<form:textarea path="historia" placeholder="Conte uma história"
+						id="historia"></form:textarea>
+					<font color="red"><form:errors path="historia" /></font> <br />
+				</div>
 				<button type="submit" class="btn-cadastrar">Atualizar</button>
 			</form:form>
 		</div>
